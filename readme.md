@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="https://github.com/terkelg/prompts/raw/master/prompts.png" alt="Prompts" width="500" />
+  <img src="https://github.com/posva/prompts/raw/master/prompts.png" alt="Prompts" width="500" />
 </p>
 
 <h1 align="center">❯ Prompts</h1>
 
 <p align="center">
-  <a href="https://npmjs.org/package/prompts">
-    <img src="https://img.shields.io/npm/v/prompts.svg" alt="version" />
+  <a href="https://npmjs.org/package/@posva/prompts">
+    <img src="https://img.shields.io/npm/v/@posva/prompts.svg" alt="version" />
   </a>
-  <a href="https://github.com/terkelg/prompts/actions/workflows/test.yml">
-    <img src="https://github.com/terkelg/prompts/actions/workflows/test.yml/badge.svg" alt="test" />
+  <a href="https://github.com/posva/prompts/actions/workflows/test.yml">
+    <img src="https://github.com/posva/prompts/actions/workflows/test.yml/badge.svg" alt="test" />
   </a>
   <a href="https://npmjs.org/package/prompts">
     <img src="https://img.shields.io/npm/dm/prompts.svg" alt="downloads" />
@@ -36,7 +36,7 @@
 * **Unified**: consistent experience across all [prompts](#-types).
 
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 
 ## ❯ Install
@@ -47,14 +47,14 @@ $ npm install --save prompts
 
 > This package supports Node 14 and above
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 ## ❯ Usage
 
-<img src="https://github.com/terkelg/prompts/raw/master/media/example.gif" alt="example prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/example.gif" alt="example prompt" width="499" height="103" />
 
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 
 (async () => {
   const response = await prompts({
@@ -68,10 +68,10 @@ const prompts = require('prompts');
 })();
 ```
 
-> See [`example.js`](https://github.com/terkelg/prompts/blob/master/example.js) for more options.
+> See [`example.js`](https://github.com/posva/prompts/blob/master/example.js) for more options.
 
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 
 ## ❯ Examples
@@ -81,7 +81,7 @@ const prompts = require('prompts');
 Prompt with a single prompt object. Returns an object with the response.
 
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 
 (async () => {
   const response = await prompts({
@@ -100,7 +100,7 @@ Prompt with a list of prompt objects. Returns an object with the responses.
 Make sure to give each prompt a unique `name` property to prevent overwriting values.
 
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 
 const questions = [
   {
@@ -134,7 +134,7 @@ Prompt properties can be functions too.
 Prompt Objects with `type` set to `falsy` values are skipped.
 
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 
 const questions = [
   {
@@ -155,7 +155,7 @@ const questions = [
 ```
 
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 
 ## ❯ API
@@ -228,7 +228,7 @@ Powerful when combined with arguments of process.
 
 **Example**
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 prompts.override(require('yargs').argv);
 
 (async () => {
@@ -272,7 +272,7 @@ If a value is an instance of `Error` it will simulate the user cancelling/exitin
 
 **Example:**
 ```js
-const prompts = require('prompts');
+const prompts = require('@posva/prompts');
 
 prompts.inject([ '@terkelg', ['#ff0000', '#0000ff'] ]);
 
@@ -299,7 +299,7 @@ prompts.inject([ '@terkelg', ['#ff0000', '#0000ff'] ]);
 })();
 ```
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 
 ## ❯ Prompt Objects
@@ -427,7 +427,7 @@ By default, prompts uses `process.stdin` for receiving input and `process.stdout
 If you need to use different streams, for instance `process.stderr`, you can set these with the `stdin` and `stdout` properties.
 
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 
 ## ❯ Types
@@ -453,7 +453,7 @@ If you need to use different streams, for instance `process.stderr`, you can set
 Hit <kbd>tab</kbd> to autocomplete to `initial` value when provided.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/text.gif" alt="text prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/text.gif" alt="text prompt" width="499" height="103" />
 
 ```js
 {
@@ -484,7 +484,7 @@ Hit <kbd>tab</kbd> to autocomplete to `initial` value when provided.
 This prompt is a similar to a prompt of type `'text'` with `style` set to `'password'`.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/password.gif" alt="password prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/password.gif" alt="password prompt" width="499" height="103" />
 
 ```js
 {
@@ -515,7 +515,7 @@ This prompt is working like `sudo` where the input is invisible.
 This prompt is a similar to a prompt of type `'text'` with style set to `'invisible'`.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/invisible.gif" alt="invisible prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/invisible.gif" alt="invisible prompt" width="499" height="103" />
 
 ```js
 {
@@ -545,7 +545,7 @@ This prompt is a similar to a prompt of type `'text'` with style set to `'invisi
 You can type in numbers and use <kbd>up</kbd>/<kbd>down</kbd> to increase/decrease the value. Only numbers are allowed as input. Hit <kbd>tab</kbd> to autocomplete to `initial` value when provided.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/number.gif" alt="number prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/number.gif" alt="number prompt" width="499" height="103" />
 
 ```js
 {
@@ -585,7 +585,7 @@ You can type in numbers and use <kbd>up</kbd>/<kbd>down</kbd> to increase/decrea
 Hit <kbd>y</kbd> or <kbd>n</kbd> to confirm/reject.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/confirm.gif" alt="confirm prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/confirm.gif" alt="confirm prompt" width="499" height="103" />
 
 ```js
 {
@@ -626,7 +626,7 @@ string separated by `separator`.
 }
 ```
 
-<img src="https://github.com/terkelg/prompts/raw/master/media/list.gif" alt="list prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/list.gif" alt="list prompt" width="499" height="103" />
 
 
 | Param | Type | Description |
@@ -648,7 +648,7 @@ string separated by `separator`.
 Use tab or <kbd>arrow keys</kbd>/<kbd>tab</kbd>/<kbd>space</kbd> to switch between options.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/toggle.gif" alt="toggle prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/toggle.gif" alt="toggle prompt" width="499" height="103" />
 
 ```js
 {
@@ -682,7 +682,7 @@ Use tab or <kbd>arrow keys</kbd>/<kbd>tab</kbd>/<kbd>space</kbd> to switch betwe
 Use <kbd>up</kbd>/<kbd>down</kbd> to navigate. Use <kbd>tab</kbd> to cycle the list.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/select.gif" alt="select prompt" width="499" height="130" />
+<img src="https://github.com/posva/prompts/raw/master/media/select.gif" alt="select prompt" width="499" height="130" />
 
 ```js
 {
@@ -723,7 +723,7 @@ Use <kbd>space</kbd> to toggle select/unselect and <kbd>up</kbd>/<kbd>down</kbd>
 By default this prompt returns an `array` containing the **values** of the selected items - not their display title.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/multiselect.gif" alt="multiselect prompt" width="499" height="130" />
+<img src="https://github.com/posva/prompts/raw/master/media/multiselect.gif" alt="multiselect prompt" width="499" height="130" />
 
 ```js
 {
@@ -772,7 +772,7 @@ The default suggests function is sorting based on the `title` property of the ch
 You can overwrite how choices are being filtered by passing your own suggest function.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/autocomplete.gif" alt="auto complete prompt" width="499" height="163" />
+<img src="https://github.com/posva/prompts/raw/master/media/autocomplete.gif" alt="auto complete prompt" width="499" height="163" />
 
 ```js
 {
@@ -820,7 +820,7 @@ const suggestByTitle = (input, choices) =>
 Use <kbd>left</kbd>/<kbd>right</kbd>/<kbd>tab</kbd> to navigate. Use <kbd>up</kbd>/<kbd>down</kbd> to change date.
 
 #### Example
-<img src="https://github.com/terkelg/prompts/raw/master/media/date.gif" alt="date prompt" width="499" height="103" />
+<img src="https://github.com/posva/prompts/raw/master/media/date.gif" alt="date prompt" width="499" height="103" />
 
 ```js
 {
@@ -867,7 +867,7 @@ Default locales:
 ```
 >**Formatting**: See full list of formatting options in the [wiki](https://github.com/terkelg/prompts/wiki/Date-Time-Formatting)
 
-![split](https://github.com/terkelg/prompts/raw/master/media/split.png)
+![split](https://github.com/posva/prompts/raw/master/media/split.png)
 
 **↑ back to:** [Prompt types](#-types)
 
